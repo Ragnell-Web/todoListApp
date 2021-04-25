@@ -60,14 +60,19 @@ function showTask() {
       <li class="list">${list}<span onclick="deleteBtn(${index})"><i class="fas fa-trash"></i></span></li>`
   }).join(``);
   todoList.innerHTML = listArrHTML;
+  wrapper.addEventListener(`click`, function (e) {
+    if (e.target.classList.contains(`list`)) {
+      e.target.classList.toggle(`lineThrough`);
+    }
+  });
   inputBox.value = ``; //when addbtn click value in input will null 
 }
 
-wrapper.addEventListener(`click`, function (e) {
-  if (e.target.classList.contains(`list`)) {
-    e.target.classList.toggle(`lineThrough`)
-  }
- })
+// wrapper.addEventListener(`click`, function (e) {
+//   if (e.target.classList.contains(`list`)) {
+//     e.target.classList.toggle(`lineThrough`)
+//   }
+//  })
 
 function deleteBtn(index) {
   let listArr = locStorage();
