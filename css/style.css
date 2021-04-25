@@ -129,3 +129,10 @@ body{
   opacity: 1;
   pointer-events: auto;
 }
+
+/* For Androids */
+@media (max-width: 600px) {
+  .wrapper{
+    margin: 120px 20px;
+  }
+}
