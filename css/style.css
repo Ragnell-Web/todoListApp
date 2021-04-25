@@ -131,8 +131,8 @@ body{
 }
 
 /* For Androids */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .wrapper{
     margin: 120px 20px;
   }
-}
+} */
